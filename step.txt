@@ -1,0 +1,15 @@
+1) Steps to Install and Use HybridAuth:
+
+    run code: composer require hybridauth/hybridauth
+    
+    details: The command composer require hybridauth/hybridauth installs the HybridAuth library, 
+                which is a PHP library used for social authentication. 
+                This allows users to log in to your application using their social media accounts (e.g., Facebook, Google, Twitter).
+
+2) Steps to Install and Use Symfony Mailer:
+
+    run code: composer require symfony/mailer
+    
+    details: The command composer require symfony/mailer installs the Symfony Mailer component,
+     which is a powerful library for sending emails in PHP. 
+     It's part of the Symfony framework but can also be used independently in non-Symfony projects.
