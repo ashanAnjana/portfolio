@@ -33,7 +33,7 @@
                 <a href="https://Wa.me/+702720521" target="_blank" style="--i:7"><i class='bx bxl-whatsapp-square'></i></a>
                 <a href="https://mail.google.com/" target="_blank" style="--i:8"><i class='bx bxl-gmail' ></i></a>
             </div>
-            <a href="#" class="btn-box">More About Me</a>
+            <!-- <a href="#" class="btn-box">More About Me</a> -->
         </div>
     </section>
 
@@ -43,6 +43,7 @@
         </div>
         <div class="about-text">
             <h2>About<span>Me</span></h2>
+            <a id="downloadBtn" href="upload/Ashan-1.pdf" target="_blank" class="read" >View CV</a>
             <h4>Full Stack Developer!</h4>
             <p>Hi, I'm Ashan Gunasekara, a passionate Full Stack Developer with 1 year of experience. 
                 I specialize in building dynamic and responsive web applications, 
@@ -55,7 +56,7 @@
 
     <section>
         <div class="services" id="services">
-            <div class="popup1" id="popup1">
+            <div class="popup1" id="popup11">
                 <h2>Intern Operations</h2>
                 <p>As a web developer and operations assistant, I am responsible for maintaining and enhancing web applications by introducing new features and resolving live issues. 
                     My role involves innovating solutions to improve system functionalities, such as implementing a streamlined permissions application process within the web application.
@@ -64,7 +65,7 @@
                 </p>
                 <button type="button" class="ok" onclick="closePopup(1)">OK</button>
             </div>
-            <div class="popup1" id="popup2">
+            <div class="popup1" id="popup12">
                 <h2>Trainee Web Developer</h2>
                 <p>As a passionate and dedicated Software Developer, I bring expertise in building efficient and reliable web applications. 
                     With hands-on experience in PHP, jQuery, AJAX, SQL, JavaScript, and the Yii framework, I specialize in designing and maintaining robust client-server applications.
@@ -91,7 +92,7 @@
                         <a href="#" class="read" onclick="openPopup(2)">Lern more</a>
                         
                     </div>
-                    <div>
+                    <!-- <div>
                         <i class="bx bxl-apple" style="color:#00eeff"></i>
                         <h2>Trainee Web Developer</h2>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
@@ -99,7 +100,7 @@
                              ipsam ipsum. Saepe necessitatibus dicta atque illo 
                              ex suscipit fugiat vero, nobis laudantium blanditiis?</p>
                         <a href="#" class="read">Lern more</a>
-                    </div>
+                    </div> -->
                 </div> 
             </div>
         </div>
@@ -196,6 +197,41 @@
 
     <section>
         <div id="portfolio" id="certificate">
+
+            <div class="popup2" id="popup23">
+                <h2>AI/ML Engineer - Stage 1</h2>
+                <p>This is the first course under the SLIIT Artificial Intelligence Engineer Course series. 
+                    A very practical and hands-on approach will be followed throughout the course, 
+                    and you will be introduced to the most cutting-edge technologies that are currently used in the ML industry, 
+                    including Tensorflow and PyTorch. This course will enable you to develop your skills through a series of guided projects and case studies. 
+                    Enrol today to discover a vast array of well-sought knowledge in one of the most promising fields of the present day and learn under a highly qualified panel of lecturers.
+                </p>
+                <button type="button" class="ok" onclick="closePopup(3)">Close</button>
+                <a href="upload/AIML-1.pdf" target="_blank" class="ok">Certificate</a>
+
+            </div>
+            <div class="popup2" id="popup24">
+                <h2>Python for Beginners</h2>
+                <p>This is an easy-to-follow guide to the fundamentals of how software applications are created and maintained.
+                    Python is one of the most popular programming languages, especially for beginners. This course provides lecture videos, 
+                    lecture slides, lecture notes and quizzes in essential topics to get you started with programming in Python. 
+                </p>
+                <button type="button" class="ok" onclick="closePopup(4)">Close</button>
+                <a href="upload/Python_for_Beginners_E-Certificate.pdf" target="_blank" class="ok">Certificate</a>
+
+            </div>
+            <div class="popup2" id="popup25">
+                <h2>Web Design for Beginners</h2>
+                <p>This is a self-paced online course on the fundamentals of how to design websites.
+                     The contents cover the basic building blocks for web designing, including introducing WWW and Internet, 
+                     essential HTML elements, applying CSS styles, creating interactivity using Javascripts and designing responsive web pages.
+                     You can follow this course and gather the technical skills and knowledge required to be a web designer.  
+                </p>
+                <button type="button" class="ok" onclick="closePopup(5)">Close</button>
+                <a href="upload/Web_Design_for_Beginners_E-Certificate.pdf" target="_blank" class="ok">Certificate</a>
+
+            </div>
+
             <div class="main-text" id="certificate">
                 <h2>Latest <span>Certificate</span></h2>
 
@@ -204,39 +240,29 @@
                         <img src="img/AIML-01.jpg">
                         <div class="layer">
                             <h5>AI/ML Engineer - Stage 1</h5>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                                 At laboriosam dignissimos reiciendis quam corporis doloribus 
-                                 aliquam? Odio beatae perspiciatis, tempora nam est placeat,
-                                 dolores harum labore,
-                                 dicta eius consequuntur facere!</p>
+                            <p>This is the first course under the SLIIT Artificial Intelligence Engineer Course series. 
+                                A very practical and hands-on approach will be followed throughout the course... 
+                                </p>
 
-                            <a href="#"><i class="bx bx-link-external" style="color: aliceblue;"></i></a>
+                            <a href="#" onclick="openPopup(3)"><i class="bx bx-book-reader" style="color: #052642;"></i></a>    
+                        </div>
+                    </div>
+                    <div class="row">
+                        <img src="img/python-01.png">
+                        <div class="layer">
+                            <h5>Python for Beginners</h5>
+                            <p>This is an easy-to-follow guide to the fundamentals of how software applications are created and maintained...</p>
+
+                            <a href="#" onclick="openPopup(4)"><i class="bx bx-book-reader" style="color: #052642;"></i></a>    
                         </div>
                     </div>
                     <div class="row">
                         <img src="img/web-dev-01.jpg">
                         <div class="layer">
-                            <h5>AI/ML Engineer - Stage 1</h5>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                                 At laboriosam dignissimos reiciendis quam corporis doloribus 
-                                 aliquam? Odio beatae perspiciatis, tempora nam est placeat,
-                                 dolores harum labore,
-                                 dicta eius consequuntur facere!</p>
+                            <h5>Web Design for Beginners</h5>
+                            <p>This is a self-paced online course on the fundamentals of how to design websites...</p>
 
-                            <a href="#"><i class="bx bx-link-external" style="color: aliceblue;"></i></a>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <img src="img/AIML-01.jpg">
-                        <div class="layer">
-                            <h5>AI/ML Engineer - Stage 1</h5>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                                 At laboriosam dignissimos reiciendis quam corporis doloribus 
-                                 aliquam? Odio beatae perspiciatis, tempora nam est placeat,
-                                 dolores harum labore,
-                                 dicta eius consequuntur facere!</p>
-
-                            <a href="#"><i class="bx bx-link-external" style="color: aliceblue;"></i></a>
+                            <a href="#" onclick="openPopup(5)"><i class="bx bx-book-reader" style="color: #052642;"></i></a>    
                         </div>
                     </div>
                     <div class="row">
@@ -249,7 +275,7 @@
                                  dolores harum labore,
                                  dicta eius consequuntur facere!</p>
 
-                            <a href="#"><i class="bx bx-link-external" style="color: aliceblue;"></i></a>
+                            <a href="#"><i class="bx bx-show" style="color: aliceblue;"></i></a>
                         </div>
                     </div>
                 </div>
