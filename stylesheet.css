@@ -201,7 +201,7 @@ body {
     display: flex;
     grid-template-columns: repeat(auto-fit,minmax(259px,1fr));
     grid-gap: 40px;
-    margin-top: 50px;
+    margin-top: 5px;
 }
 
 .services-list div{
