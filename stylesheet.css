@@ -6,8 +6,9 @@
 }
 
 body {
-    color: aliceblue;
-    background: #081b25;
+    color: #3d3d3d;
+    /* background: url(img/BG6.jpg) no-repeat; */
+    background-color: #e5edee;
 }
 
 .header {
@@ -16,7 +17,7 @@ body {
     left: 0;
     width: 100%;
     padding: 20px 10%;
-    background: #051129;
+    background: #3d3d3d;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -26,10 +27,10 @@ body {
 .logo {
     position: relative;
     font-size: 25px;
-    color: #ebc9c9;
+    color: #dbdbdb;
     text-decoration: none;
     font-weight: 600;
-    cursor: default;
+    cursor: pointer;
     opacity: 0;
     animation: slideRight 1s ease forwards;
 }
@@ -37,7 +38,7 @@ body {
 .navbar a {
     display: inline-block;
     font-size: 25px;
-    color: #dfcfcf;
+    color: #dbdbdb;
     text-decoration: none;
     font-weight: 500;
     margin-left: 35px;
@@ -48,7 +49,7 @@ body {
 }
 
 .navbar a:hover {
-    color: #0ef;
+    color: #ffffff;
     
 }
 
@@ -57,7 +58,7 @@ body {
     width: 100%;
     justify-content: space-between;
     height: 100vh;
-    background: url(img/mainBG.jpg) no-repeat;
+    /* background: url(img/BG6.jpg) no-repeat; */
     background-size: cover;
     background-position: center;
     display: flex;
@@ -75,7 +76,7 @@ body {
     animation-delay: .7s;
 }
 .home-content h3 span {
-    color: #0ef;
+    color: #d4844f;
 }
 .home-content h3 {
     font-size: 32px;
@@ -110,10 +111,10 @@ body {
     width: 40px;
     height: 40px;
     background: transparent;
-    border: 2px solid #0ef;
+    border: 2px solid #d4844f;
     border-radius: 50%;
     font-size: 20px;
-    color: #0ef;
+    color: #d4844f;
     text-decoration: none;
     transition: .5s ease;
     opacity: 0;
@@ -122,9 +123,9 @@ body {
 }
 
 .home-sci a:hover {
-    background: #0ef;
-    color: #081b29;
-    box-shadow: 0 0 20px #0ef;
+    background: #d4844f;
+    color: #fff;
+    box-shadow: 0 0 20px #d4844f;
 }
 
 .about {
@@ -132,44 +133,51 @@ body {
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     gap: 1.5rem;
+    padding-top: 130px;
+    margin-top: 200px;
 }
 
 .about-img img {
-    padding-bottom: 20%;
-    max-width: 630px;
-    height: auto;
-    width: 100%;
-    border-radius: 8px;
+    width: 430px;
+    height: 500px;
+    border-radius: 40px;
+    margin-left: 80px;
+    transition: background 0.5s, transform 0.5s;
+    box-shadow: 1px 1px 20px #302f2f, 1px 1px 40px #525252
 }
 
 .about-text h2 {
     font-size: 60px;
+    margin-bottom: 8px;
 }
 
 .about-text h2 span {
-    color: #0ef;
+    color: #d4844f;
 }
 
 .about-text h4 {
     font-size: 29px;
     font-weight: 600;
-    color: #fff;
+    color: #525252;
     line-height: 1.7;
     margin: 15px 0 30px;
 }
 
 .about-text p {
-    color: aliceblue;
+    color: #706e6e;
     font-size: 20px;
     line-height: 1.4;
     margin-bottom: 4rem;
+    margin-right: 2rem;
+    text-align: justify;
 }
 
 #services {
-    color: aliceblue;
+    color: #525252;
     font-size: 20px;
     line-height: 1.4;
     margin-bottom: 4rem;
+    /* text-align: center; */
 }
 .sub-title {
     text-align: center;
@@ -178,15 +186,19 @@ body {
 }
 
 .sub-title span {
-    color: #0ef;
+    color: #d4844f;
 }
 
 .container {
     padding: 90px;
+    /* display: flex; Ensures flexibility */
+    flex-direction: column; /* Align content vertically */
+    /* align-items: center; */
+    /* text-align: center; */
 }
 
 .services-list {
-    display: grid;
+    display: flex;
     grid-template-columns: repeat(auto-fit,minmax(259px,1fr));
     grid-gap: 40px;
     margin-top: 50px;
@@ -200,7 +212,7 @@ body {
     border-right: 10px;
     border-radius: 20px;
     transition: background 0.5s, transform 0.5s;
-    box-shadow: 1px 1px 20px rgba(1, 34, 144, 0.969), 1px 1px 40px #0053b8f7
+    box-shadow: 1px 1px 20px #302f2f, 1px 1px 40px #525252
 }
 
 .services-list div i {
@@ -224,7 +236,7 @@ body {
 
 .popup1 {
     width: 800px;
-    background: #fff;
+    background: #525252;
     opacity: 0.98;
     border-radius: 6px;
     position: fixed;
@@ -233,7 +245,7 @@ body {
     transform: translate(-50%, -50%) scale(0.1);
     text-align: center;
     padding: 0 30px 30px;
-    color: #333;
+    color: #fff;
     visibility: hidden;
     transition: transform 0.4s, top 0.4s;
     z-index: 1000;
@@ -254,19 +266,20 @@ body {
 .popup1 .ok {
     display: inline-block;
     padding: 12px 28px;
-    background: #0ef;
+    background: #d4844f;
     border: none;
     border-radius: 40px;
     font-size: 16px;
-    color: #000;
+    color: #fff;
     letter-spacing: 1px;
     text-decoration: none;
     font-weight: 600;
+    cursor: pointer;
 }
 
 .popup2 {
     width: 800px;
-    background: linear-gradient(rgba(0,0,0,0.9),#0ef);
+    background: #525252;
     opacity: 0.98;
     border-radius: 6px;
     position: fixed;
@@ -302,7 +315,7 @@ body {
 .popup2 .ok {
     display: inline-block;
     padding: 12px 28px;
-    background: #0ef;
+    background: #d4844f;
     border: none;
     border-radius: 40px;
     font-size: 16px;
@@ -310,6 +323,7 @@ body {
     letter-spacing: 1px;
     text-decoration: none;
     font-weight: 600;
+    cursor: pointer;
 }
 
 body .no-scroll {
@@ -321,24 +335,24 @@ body .no-scroll {
 .read {
     display: inline-block;
     padding: 12px 28px;
-    background: #0ef;
+    background: #d4844f;
     border-radius: 40px;
     font-size: 16px;
-    color: #000;
+    color: #fff;
     letter-spacing: 1px;
     text-decoration: none;
     font-weight: 600;
     opacity: 0;
     animation: slideTop 1s ease forwards;
     animation-delay: 2s;
-    box-shadow: 0 0 5px #0ef, 0 0 25px #0ef;
+    box-shadow: 0 0 5px #d4844f, 0 0 25px #d4844f;
 
 }
 
 .read:hover {
-    box-shadow: 0 0 5px cyan,
-    0 0 25px cyan, 0 0 50px cyan,
-    0 0 100px cyan, 0 0 200px cyan;
+    box-shadow: 0 0 5px #ffab73,
+    0 0 25px #ffab73, 0 0 50px #ffab73,
+    0 0 100px #ffab73, 0 0 200px #ffab73;
 }
 
 .services-list div:hover {
@@ -397,7 +411,7 @@ section {
     border-radius: 10px;
     width: 100%;
     height: 5px;
-    background-color: #000;
+    background-color: #535151;
     animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
     transform: scaleX(0);
     transform-origin: left;
@@ -411,7 +425,7 @@ section {
 
 .Technical-bars .bar .progress-line span{
     height: 100%;
-    background-color: #0ef;
+    background-color: #d4844f;
     position: absolute;
     border-radius: 10px;
     animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
@@ -526,7 +540,7 @@ section {
 
 .path {
     stroke-width: 10;
-    stroke: #0ef;
+    stroke: #d4844f;
     fill: transparent;
     stroke-dasharray: 502;
     stroke-dashoffset: 502;
@@ -573,7 +587,7 @@ section {
 .radial-bar .text{
     width: 100%;
     position: absolute;
-    text-align: center;
+    text-align: left;
     left: 50%;
     bottom: -5px;
     transform: translateX(-50px);
@@ -598,15 +612,21 @@ section {
 }
 
 .main-text h2 span {
-    color: #0ef;
+    color: #d4844f;
 }
 
 .portfolio-content {
-    display: grid;
+    display: flex;
+    gap: 10px; /* Adds space between items */
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
     grid-template-columns: repeat(auto-fit, minmax(359px, auto));
 }
 
 .row {
+    flex: 0 0 auto; /* Ensures each row doesn't shrink or grow */
+    width: 30%; /* Adjust the width to fit multiple items inline */
     position: relative;
     overflow: hidden;
     border-radius: 8px;
@@ -623,7 +643,7 @@ section {
 .layer {
     width: 100%;
     height: 0;
-    background: linear-gradient(rgba(0,0,0,0.1),#0ef);
+    background: linear-gradient(rgba(0,0,0,0.1),#d4844f);
     position: absolute;
     border-radius: 8px;
     left: 0;
@@ -682,28 +702,30 @@ section {
     align-items: center;
     gap: 3rem;
     padding-left: 30px;
-    margin-top: 130px;
+    margin-top: 80px;
+    padding-top: 100px;
+    text-align: center;
 }
 
 .contact-text h2 {
-    font-size: 90px;
+    font-size: 60px;
     line-height: 1;
     text-align: center;
 }
 
 .contact-text h2 span{
-    color: #0ef;
+    color: #d4844f;
 }
 
 .contact-text h4{
     margin: 15px 0;
-    color: #ebc9c9;
+    color: #525252;
     font-size: 20px;
     font-weight: 600;
 }
 
 .contact-text p{
-    color: #dfcfcf;
+    color: #706e6e;
     font-size: 20px;
     line-height: 30px;
     text-align: justify;
@@ -721,15 +743,15 @@ section {
 
 .contact-list i {
     display: inline-block;
-    color: #0ef;
+    color: #d4844f;
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 200;
     transition: all .40s ease;
 }
 
 .contact-list li a:hover{
     transform: scale(1.01) translateY(-5px);
-    color: #0ef;
+    color: #d4844f;
 }
 
 .contact-icon i {
@@ -739,12 +761,12 @@ section {
     width: 40px;
     height: 40px;
     background: transparent;
-    border: 2px solid#0ef;
+    border: 2px solid#d4844f;
     border-radius: 50%;
     font-size: 20px;
-    color: #0ef;
+    color: #d4844f;
     text-decoration: none;
-    margin: 30px 15px 30px 0;
+    margin: 5px 15px 30px 0;
     transition: .5s ease;
     opacity: 0;
     animation: slideLeft 1s ease forwards;
@@ -752,9 +774,9 @@ section {
 }
 
 .contact-icon i:hover{
-    background: #0ef;
-    color: #000;
-    box-shadow: 0 0 20px #0ef;
+    background: #d4844f;
+    color: #FFF;
+    box-shadow: 0 0 20px #d4844f;
 }
 
 .contact-form .alertMsgg {
@@ -770,7 +792,7 @@ section {
     outline: none;
     width: 90%;
     padding: 18px;
-    background: #555557;
+    background: #a19c99;
     color: #000;
     font-size: 1rem;
     font-weight: 600;
@@ -786,23 +808,23 @@ section {
 .contact-form form .send {
     display: inline-block;
     padding: 12px 28px;
-    background: #0ef;
+    background: #d4844f;
     border-radius: 40px;
     font-size: 18px;
-    color: #000;
+    color: #FFF;
     letter-spacing: 1px;
     text-decoration: none;
     font-weight: 600;
     opacity: 0;
     animation: slideTop 1s ease forwards;
     animation-delay: 2s;
-    box-shadow: 0 0 5px #0ef, 0 0 25px #0ef;
+    box-shadow: 0 0 5px #d4844f, 0 0 25px #d4844f;
 }
 
 .contact-form form .send:hover {
-    box-shadow: 0 0 5px cyan,
-    0 0 25px cyan, 0 0 50px cyan,
-    0 0 100px cyan, 0 0 200px cyan;
+    box-shadow: 0 0 5px #d4844f,
+    0 0 25px #d4844f, 0 0 50px #d4844f,
+    0 0 100px #d4844f, 0 0 200px #d4844f;
 }
 
 
