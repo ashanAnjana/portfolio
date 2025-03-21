@@ -63,11 +63,11 @@ body {
     background-position: center;
     display: flex;
     align-items: center;
-    padding: 70px 10% 0;
+    padding: 70px 5% 0;
 }
 
 .home-content {
-    max-width: 600px;
+    width: 600px;
 }
 
 .home-content h3:nth-of-type(2) {
@@ -126,6 +126,46 @@ body {
     background: #d4844f;
     color: #fff;
     box-shadow: 0 0 20px #d4844f;
+}
+
+.home-anim {
+    width: 550px;
+    display: flex;
+    justify-content: center;
+    min-height: 80vh;
+    align-items: center;
+
+}
+
+.home-anim h2{
+    position: relative;
+    font-size: 10em;
+    letter-spacing: 15px;
+    color: #3d3d3d;
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0008);
+    line-height: 0.70em;
+    outline: none;
+    animation: animatee 5s linear infinite;
+}
+
+@keyframes animatee {
+
+    0%, 18%, 20%, 50.1%, 60%, 65.1%, 80%, 90.1%,92%
+    {
+        color: #3d3d3d;
+        text-shadow: none;
+    }
+    18.1%,20.1%,30%,50%,60.1%,65%,80.1%,90%,92.1%,100%{
+        color:#fff;
+        text-shadow: 0 0 10px #03bcf4,
+        0 0 20px #03bcf4,
+        0 0 40px #03bcf4,
+        0 0 80px #03bcf4,
+        0 0 160px #03bcf4;
+    }
 }
 
 .about {
