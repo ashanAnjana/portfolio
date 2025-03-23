@@ -20,77 +20,34 @@ function removStyle(){
     document.body.style.top = '';
     document.body.style.overflow = '';
 }
-const ids = [1,2,3,4,5,6,7];
 
 function openPopup(id) {
 
     const scrollY = window.scrollY;
+    const ids = [1,2,3,4,5];
+
     for(let x in ids){
         // Get the popup element
         if(id == ids[x]) {
-            if(![3,4,5].includes(ids[x])) {
-                let popup = document.getElementById(`popup1${ids[x]}`);
+            let popup = document.getElementById(`popup${ids[x]}`);
+            addStyle();
+            popup.classList.add('open-popup');
+            document.body.setAttribute('data-scroll-position', scrollY);
 
-                // Apply styles to prevent scrolling on the entire page
-                addStyle();
-
-                // Make the popup visible
-                popup.classList.add('open-popup1');
-                
-                // Store the scroll position for later use
-                document.body.setAttribute('data-scroll-position', scrollY);
-
-            } else {
-                let popup = document.getElementById(`popup2${ids[x]}`);
-
-                // Apply styles to prevent scrolling on the entire page
-                addStyle();
-
-                // Make the popup visible
-                popup.classList.add('open-popup2');
-                
-                // Store the scroll position for later use
-                document.body.setAttribute('data-scroll-position', scrollY);
-            }
         }
-    } 
-
+    }
 }
 
 function closePopup(id) {
+    const ids = [1,2,3,4,5];
 
     for(let x in ids){
         if(id == ids[x]){
-            if(![3,4,5].includes(ids[x])) {
-                let popup = document.getElementById(`popup1${ids[x]}`);
-            
-                // Hide the popup
-                popup.classList.remove('open-popup1');
-                
-                // Get the stored scroll position
-                const scrollY = parseInt(document.body.getAttribute('data-scroll-position'));
-                
-                // Remove the fixed positioning and restore scrolling
-                removStyle();
-                
-                // Restore the scroll position
-                window.scrollTo(0, scrollY);
-            } else {
-                let popup = document.getElementById(`popup2${ids[x]}`);
-            
-                // Hide the popup
-                popup.classList.remove('open-popup2');
-                
-                // Get the stored scroll position
-                const scrollY = parseInt(document.body.getAttribute('data-scroll-position'));
-                
-                // Remove the fixed positioning and restore scrolling
-                removStyle();
-                
-                // Restore the scroll position
-                window.scrollTo(0, scrollY);
-            }
+            let popup = document.getElementById(`popup${ids[x]}`);
+            popup.classList.remove('open-popup');
+            const scrollY = parseInt(document.body.getAttribute('data-scroll-position'));
+            removStyle();
+            window.scrollTo(0, scrollY);
         }
     }
-
 }

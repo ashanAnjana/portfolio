@@ -9,6 +9,13 @@ body {
     color: #3d3d3d;
     /* background: url(img/BG6.jpg) no-repeat; */
     background-color: #e5edee;
+    overflow-x: hidden;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 .header {
@@ -57,7 +64,7 @@ body {
     position: relative;
     width: 100%;
     justify-content: space-between;
-    height: 100vh;
+    /* height: 100vh; */
     /* background: url(img/BG6.jpg) no-repeat; */
     background-size: cover;
     background-position: center;
@@ -70,11 +77,11 @@ body {
     width: 600px;
 }
 
-.home-content h3:nth-of-type(2) {
+/* .home-content h3:nth-of-type(2) {
     margin-bottom: 30px;
     animation: slideBottom 1s ease forwards;
     animation-delay: .7s;
-}
+} */
 .home-content h3 span {
     color: #d4844f;
 }
@@ -160,11 +167,11 @@ body {
     }
     18.1%,20.1%,30%,50%,60.1%,65%,80.1%,90%,92.1%,100%{
         color:#fff;
-        text-shadow: 0 0 10px #03bcf4,
-        0 0 20px #03bcf4,
-        0 0 40px #03bcf4,
-        0 0 80px #03bcf4,
-        0 0 160px #03bcf4;
+        text-shadow: 0 0 10px #d4844f,
+        0 0 20px #d4844f,
+        0 0 40px #d4844f,
+        0 0 80px #d4844f,
+        0 0 160px #d4844f;
     }
 }
 
@@ -173,15 +180,17 @@ body {
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     gap: 1.5rem;
-    padding-top: 130px;
-    margin-top: 10px;
+    padding: 70px 5% 0;
+    width: 100%;
+    /* padding-top: 130px;
+    margin-top: 10px; */
 }
 
 .about-img img {
-    width: 430px;
-    height: 500px;
+    width: 100%;
+    max-width: 430px;
+    height: auto;
     border-radius: 40px;
-    margin-left: 80px;
     transition: background 0.5s, transform 0.5s;
     box-shadow: 1px 1px 20px #302f2f, 1px 1px 40px #525252
 }
@@ -211,13 +220,15 @@ body {
     margin-right: 2rem;
     text-align: justify;
 }
+.services {
+    width: 100%;
+}
 
-#services {
+#services-div {
     color: #525252;
     font-size: 20px;
     line-height: 1.4;
     margin-bottom: 4rem;
-    /* text-align: center; */
 }
 .sub-title {
     text-align: center;
@@ -231,10 +242,7 @@ body {
 
 .container {
     padding: 90px;
-    /* display: flex; Ensures flexibility */
-    flex-direction: column; /* Align content vertically */
-    /* align-items: center; */
-    /* text-align: center; */
+    flex-direction: column;
 }
 
 .services-list {
@@ -252,7 +260,7 @@ body {
     border-right: 10px;
     border-radius: 20px;
     transition: background 0.5s, transform 0.5s;
-    box-shadow: 1px 1px 20px #302f2f, 1px 1px 40px #525252
+    box-shadow: 1px 1px 20px #302f2f, 1px 1px 40px #525252;
 }
 
 .services-list div i {
@@ -274,8 +282,9 @@ body {
     display: inline-block;
 }
 
-.popup1 {
-    width: 800px;
+.popup {
+    width: 90%;
+    max-width: 800px;
     background: #525252;
     opacity: 0.98;
     border-radius: 6px;
@@ -291,19 +300,19 @@ body {
     z-index: 1000;
 }
 
-.open-popup1{
+.open-popup {
     visibility: visible;
     transform: translate(-50%, -50%) scale(1);
 }
 
-.popup1 h2 p{
+.popup h2 p{
     text-align: center;
     font-size: 38px;
     font-weight: 500;
     margin: 30px 0 10px;
 }
 
-.popup1 .ok {
+.popup .ok {
     display: inline-block;
     padding: 12px 28px;
     background: #d4844f;
@@ -311,55 +320,6 @@ body {
     border-radius: 40px;
     font-size: 16px;
     color: #fff;
-    letter-spacing: 1px;
-    text-decoration: none;
-    font-weight: 600;
-    cursor: pointer;
-}
-
-.popup2 {
-    width: 800px;
-    background: #525252;
-    opacity: 0.98;
-    border-radius: 6px;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0.1);
-    text-align: center;
-    padding: 0 30px 30px;
-    color: #fff;
-    visibility: hidden;
-    transition: transform 0.4s, top 0.4s;
-    z-index: 1000;
-}
-
-.open-popup2{
-    visibility: visible;
-    transform: translate(-50%, -50%) scale(1);
-}
-
-.popup2 h5 {
-    text-align: center;
-    font-size: 38px;
-    font-weight: 500;
-    margin: 30px 0 10px;
-}
-.popup2 p{
-    text-align: center;
-    font-size: 20px;
-    font-weight: 500;
-    margin: 30px 0 10px;
-}
-
-.popup2 .ok {
-    display: inline-block;
-    padding: 12px 28px;
-    background: #d4844f;
-    border: none;
-    border-radius: 40px;
-    font-size: 16px;
-    color: #000;
     letter-spacing: 1px;
     text-decoration: none;
     font-weight: 600;
@@ -404,11 +364,13 @@ section {
     flex-wrap: wrap;
 }
 
+#skills-main{
+    width: 100%;
+    padding: 40px 5% 0;
+}
+
 .container1 {
-    width: 500px;
-    height: 500px;
-    padding: 75px 90px;
-    margin-left: 120px;
+    width: 50%;
 }
 
 .heading1 {
@@ -416,7 +378,7 @@ section {
     text-decoration: underline;
     text-underline-offset: 10px;
     text-decoration-thickness: 5px;
-    margin-bottom: 50px;    
+    margin-bottom: 30px;    
 }
 
 .bar {
@@ -636,17 +598,21 @@ section {
     animation: showText 0.5s 1s linear forwards;
     opacity: 0;
 }
+#certificate{
+    width: 100%;
+}
 
 .main-text {
-    padding-top: 130px;
-    margin-top: 200px;
+    padding: 30px 0;
+    margin-top: 30px;
+    align-items: center;
     text-align: center;
+    justify-content: center;
 }
 
 .main-text h2 {
     font-size: 60px;
     line-height: 2;
-    text-align: center;   
     display: block;
     margin: 0 auto;
 }
@@ -657,20 +623,21 @@ section {
 
 .portfolio-content {
     display: flex;
-    gap: 10px; /* Adds space between items */
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    grid-template-columns: repeat(auto-fit, minmax(359px, auto));
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center; 
+    align-items: center; 
+    margin-top: 20px;
 }
 
 .row {
-    flex: 0 0 auto; /* Ensures each row doesn't shrink or grow */
-    width: 30%; /* Adjust the width to fit multiple items inline */
+    flex: 0 0 auto;
+    width: 30%;
     position: relative;
     overflow: hidden;
     border-radius: 8px;
     cursor: pointer;
+    text-align: center;
 }
 
 .row img {
@@ -738,10 +705,10 @@ section {
 
 .contact {
     display: grid;
+    width: 100%;
     grid-template-columns: repeat(2,1fr);
     align-items: center;
     gap: 3rem;
-    padding-left: 30px;
     margin-top: 80px;
     padding-top: 100px;
     text-align: center;
@@ -770,6 +737,7 @@ section {
     line-height: 30px;
     text-align: justify;
     margin-bottom: 2rem;
+    padding-left: 30px;
 }
 
 .contact-list {

@@ -1,0 +1,83 @@
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    .header {
+        flex-direction: column; /* Stack header elements */
+        padding: 10px 5%;
+    }
+
+    .navbar {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .navbar a {
+        margin: 5px; /* Add space between navigation items */
+        font-size: 18px;
+    }
+    
+    /********** Home ***********/
+    .home{
+        flex-direction: column;
+        height: auto;
+    }
+    .home-content {
+        width: 100%; /* Make content width adaptive */
+        margin-top: 5vh;
+        text-align: center;
+    }
+    .home-anim{
+        width: 100%;
+        text-align: center;
+    }
+    /********** About ***********/
+    .about {
+        grid-template-columns: 1fr;
+    }
+    
+    /********** Services ***********/
+    .services-list {
+        flex-direction: column;
+    }
+
+    .popup {
+        width: 90%;
+        padding: 10px;
+    }
+
+    /********** Skills ***********/
+    #skills-main {
+        flex-direction: column;
+        align-items: center;
+    }
+    .container1 {
+        width: 90%;
+        flex-direction: column;
+    }
+
+    .container1:last-child{
+        margin-top: 25px;
+    }
+
+    /********** Certificate ***********/
+    .portfolio-content{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .portfolio-content .row{
+        width: 90%;
+    }
+
+    /********** Certificate ***********/
+    .contact {
+        grid-template-columns: 1fr;
+        padding-left: 0;
+    }
+    .contact-text p{
+        padding: 5px;
+    }
+}
