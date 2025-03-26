@@ -30,9 +30,10 @@
             <p>I'm a Web Developer with extensive experience for over 1 years.</p>
 
             <div class="home-sci">
-                <a href="https://www.linkedin.com/in/ashan-gunasekara-5967962a5" target="_blank" style="--i:6"><i class='bx bxl-linkedin-square'></i></a>
-                <a href="https://Wa.me/+702720521" target="_blank" style="--i:7"><i class='bx bxl-whatsapp'></i></a>
-                <a href="https://mail.google.com/" target="_blank" style="--i:8"><i class='bx bxl-gmail' ></i></a>
+                <a href="https://www.linkedin.com/in/ashan-gunasekara-5967962a5" target="_blank" style="--i:6" title="Linkedin"><i class='bx bxl-linkedin-square'></i></a>
+                <a href="https://Wa.me/+702720521" target="_blank" style="--i:7" title="Whatsapp"><i class='bx bxl-whatsapp'></i></a>
+                <a href="https://mail.google.com/" target="_blank" style="--i:8" title="Gmail"><i class='bx bxl-gmail' ></i></a>
+                <a href="https://github.com/ashanAnjana" target="_blank" style="--i:8" title="GitHub"><i class='bx bxl-github'></i></a>
             </div>
         </div>
         <div class="home-anim">
@@ -278,9 +279,9 @@
                 <li><i class='bx bx-location-plus'></i> "ANJANA", KADAWEDDUWA, YATIYANA, MATARA.</li>
             </div>
             <div class="contact-icon">
-                <a href="https://www.linkedin.com/in/ashan-gunasekara-5967962a5" target="_blank"><i class='bx bxl-linkedin-square'></i></a>
-                <a href="https://Wa.me/+702720521" target="_blank" ><i class='bx bxl-whatsapp-square'></i></a>
-                <a href="https://mail.google.com/" target="_blank" ><i class='bx bxl-gmail' ></i></a>
+                <a href="https://www.linkedin.com/in/ashan-gunasekara-5967962a5" target="_blank" title="Linkedin"><i class='bx bxl-linkedin-square'></i></a>
+                <a href="https://Wa.me/+702720521" target="_blank" ><i class='bx bxl-whatsapp-square' title="Whatsapp"></i></a>
+                <a href="https://mail.google.com/" target="_blank" ><i class='bx bxl-gmail' title="Gmail"></i></a>
             </div>
         </div>
 
@@ -321,41 +322,48 @@
             }
 
             if(name === '' || message === ''){
+                const button = document.getElementById('mailMeButton');
+
                 alertDiv.textContent = 'Required fields must not be empty.';
+                button.disabled = true;
                 applyStyle(styleArray[1]);
-                setTimeout(() => applyStyle(styleArray[2]), 2000);
-                document.getElementById('mailForm').reload();
+
+                setTimeout(() => {applyStyle(styleArray[2]);button.disabled = false;}, 5000);
+                document.getElementById('mailForm').reset();
+                //button.disabled = false;
 
             }else {
 
+                const button = document.getElementById('mailMeButton');
+                button.disabled = true;
                 const response = await fetch('send-email.php', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
                     body: new URLSearchParams({ name, email, message, subject })
                 });
-                
                 const result = await response.json();
 
                 if(result.status == 'success') {
 
                     alertDiv.textContent = 'Message sent successfully!';
                     applyStyle(styleArray[0]);
-                    setTimeout(() => applyStyle(styleArray[2]), 3000);
+                    setTimeout(() => {applyStyle(styleArray[2]);button.disabled = false;}, 3000);
                     document.getElementById('mailForm').reset();
+                    
 
                 }else if(result.status == 'error1') {
 
                     alertDiv.textContent = 'Invalid email address.';
                     applyStyle(styleArray[1]);
-                    setTimeout(() => applyStyle(styleArray[2]), 2000);
-                    document.getElementById('mailForm').reload();
+                    setTimeout(() => {applyStyle(styleArray[2]);button.disabled = false;}, 2000);
+                    document.getElementById('mailForm').reset();
 
                 }else {
 
                     alertDiv.textContent = 'Failed to send email.';
                     applyStyle(styleArray[1]);
-                    setTimeout(() => applyStyle(styleArray[2]), 2000);
-                    document.getElementById('mailForm').reload();
+                    setTimeout(() => {applyStyle(styleArray[2]);button.disabled = false;}, 2000);
+                    document.getElementById('mailForm').reset();
 
                 }
                 console.log(result.status);

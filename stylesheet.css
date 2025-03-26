@@ -827,6 +827,7 @@ section {
     animation: slideTop 1s ease forwards;
     animation-delay: 2s;
     box-shadow: 0 0 5px #d4844f, 0 0 25px #d4844f;
+    cursor: pointer;
 }
 
 .contact-form form .send:hover {
@@ -835,6 +836,9 @@ section {
     0 0 100px #d4844f, 0 0 200px #d4844f;
 }
 
+.contact-form form .send:disabled{
+    cursor: not-allowed;
+}
 
 @keyframes slideRight {
     0% {
